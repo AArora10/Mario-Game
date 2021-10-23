@@ -32,7 +32,7 @@ var gameConfig={
   gravityEnemy: 10,
   jump:-15,
 
-  // character starting point
+  // character starting point 
   startingPointX: 500,
   startingPointY: 0,
 
@@ -53,7 +53,16 @@ var gameConfig={
 =            Game Status             =
 ====================================*/
 
+noseX = "";
+noseY = "";
+gameStatus = "";
+
 function game(){
+
+  console.log ("nose x coordinate =  " + noseX);
+  console.log ("nose y coordinate =  " + noseY);
+
+
 
   instializeInDraw();
   moveEnvironment(mario);
@@ -111,6 +120,11 @@ function game(){
     changeGameStatud(mario)
   }
 }  
+
+function startGame(){
+  gameStatus = "start";
+  document.getElementById("status").innerHTML = "Game is loading...";
+}
 
 
 // change game status if any key is pressed
